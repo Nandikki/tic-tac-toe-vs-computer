@@ -175,7 +175,7 @@ function computer_plays() {
 		return 0;
 	let moved = false;
 	let i;
-	for (i = 0; i < 8; i++) {
+	for (i = 0; i < 9; i++) {
 		console.log("Computer is trying to play at " + i + " to try to win.");
 		if (gameGrid[i] == "") {
 			console.log("Verifying if this position will make Computer wins");
@@ -243,7 +243,7 @@ function computer_plays() {
 					calculates if the Player can win in the next round, and avoid it.
 		*/
 
-	for (i = 0; i < 8; i++) {
+	for (i = 0; i < 9; i++) {
 			if (moved)
 				break;
 		console.log("Computer is trying to play at " + i + " to try to avoid Player's victory.");
