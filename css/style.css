@@ -1,0 +1,90 @@
+body {
+    font-family: "Arial", sans-serif;
+}
+section {
+    text-align: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin: 10px auto;
+}
+.cell {
+    font-family: "Permanent Marker", cursive;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 1px #333333;
+    border: 1px solid #333333;
+    border-radius: 0%;
+    margin:5px 5px;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 60px;
+}
+
+.circle{
+    font-family: "Permanent Marker", cursive;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 1px #333333;
+    border: 1px solid #333333;
+    border-radius: 50%;
+    margin:5px 5px;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 60px;
+}
+
+#p_one {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cb60b3+0,a80077+35,a80077+35,c146a1+50,db36a4+100 */
+background: #cb60b3; /* Old browsers */
+background: -moz-linear-gradient(top,  #cb60b3 0%, #a80077 35%, #a80077 35%, #c146a1 50%, #db36a4 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #cb60b3 0%,#a80077 35%,#a80077 35%,#c146a1 50%,#db36a4 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #cb60b3 0%,#a80077 35%,#a80077 35%,#c146a1 50%,#db36a4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#db36a4',GradientType=0 ); /* IE6-9 */
+}
+
+#p_two {
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cedbe9+0,aac5de+17,6199c7+50,3a84c3+51,419ad6+59,4bb8f0+71,3a8bc2+84,26558b+100;Blue+Gloss */
+background: #cedbe9; /* Old browsers */
+background: -moz-linear-gradient(45deg,  #cedbe9 0%, #aac5de 17%, #6199c7 50%, #3a84c3 51%, #419ad6 59%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+body {
+   background-image: url("../img/stars.png");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
+h1 { 
+    font-family: 'Montserrat', sans-serif;
+    font-size:3em;
+    letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: yellow;
+    text-shadow: 8px 8px #ff1f8f, 20px 20px #000000;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:1em;
+    letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: yellow;
+    text-shadow: 8px 8px blue;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size:1em;
+    letter-spacing:0.1em;
+    border-radius: 10%;
+    background-color: black;
+    color: white;
+}
