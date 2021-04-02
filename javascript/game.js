@@ -1,36 +1,19 @@
 
 const statusDisplay = document.querySelector('.status');
-/*
-Here we declare some variables that we will use to track the 
-game state throught the game. 
-*/
-/*
-We will use gameActive to pause the game in case of an end scenario
-*/
+
+
 let onGame = true; // is the game happening?
-/*
-We will store our current player here, so we know whos turn 
-*/
+
 let currentPlayer = 1;
-/*
-We will store our current game state here, the form of empty strings in an array
- will allow us to easily track played cells and validate the game state later on
-*/
+
 let gameGrid = ["", "", "", 
 				"", "", "", 
 				"", "", ""];
-/*
-Here we have declared some messages we will display to the user during the game.
-Since we have some dynamic factors in those messages, namely the current player,
-we have declared them as functions, so that the actual message gets created with 
-current data every time we need it.
-*/
+
 const winningMessage = (cwinner) => (cwinner == 1) ? `Player has won!` : `Computer has won, of course!`;
 const drawMessage = () => `Game ended in a draw!`;
 const currentTurn = () => (currentPlayer == 1) ? `It's your turn!` : `The Computer will play now.`;
-/*
-We set the inital message to let the players know whose turn it is
-*/
+
 statusDisplay.innerHTML = currentTurn();
 
 function resultValidation() {
@@ -315,11 +298,33 @@ function computer_plays() {
 		*/
 		if (moved)
 			return 0;
-		i = Math.floor(Math.random() * 9);
-		while (gameGrid[i] != "") 
-			i = Math.floor(Math.random() * 9);
-		console.log("Computer played randomly: " + i);
-		gameGrid[i] = 2;
+
+		if (gameGrid[4] == "") {
+			console.log("Computer will move to the Center (first move)");
+			i = 4;
+			gameGrid[i] = 2;
+			moved = true;
+		} else {
+				let corners = [0, 2, 6, 8];
+				let time_rest = 0;
+				i = Math.floor(Math.random() * 4);
+				while(gameGrid[corners[i]] != "" && time_rest < 5) {
+					i = Math.floor(Math.random() * 4);
+					time_rest++;
+				}
+				if (time_rest < 5) {
+					console.log("Computer played randomly CORNER: " + corners[i]);
+					i = corners[i];
+					gameGrid[i] = 2;
+					moved = true;
+				} else {
+					i = Math.floor(Math.random() * 9);
+					while (gameGrid[i] != "") 
+						i = Math.floor(Math.random() * 9);
+					console.log("Computer played randomly: " + i);
+					gameGrid[i] = 2;
+				}
+			}
 		document.querySelector(".cell[index=" + CSS.escape(i) + "]").setAttribute("id", "p_two");
 		currentPlayer = 1; // Player round now.
 	}
@@ -340,3 +345,4 @@ restart button
 */
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', cellClick));
 document.querySelector('.restartBtn').addEventListener('click', restartGame);
+
